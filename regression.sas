@@ -11,7 +11,7 @@ proc template;
 end;
 run;
 
-ods pdf file='C:\Users\lkona\Desktop\SAS\Assignment\college\college_lkona.pdf' style=styles.MyPDFstyle pdftoc=2;
+ods pdf file='C:\Users\lkona\Desktop\SAS\Assignment\college\college_lkona_1.pdf' style=styles.MyPDFstyle pdftoc=2;
 Options topmargin="1in";
 
 /* Loading the college dataset for .csv format*/
@@ -136,7 +136,7 @@ Predicted_err = ((enroll - y_bar)**2)/113;
 run;
 ods proclabel "mean squared error for test dataset";
 title "MSE for test dataset";
-title1 "sum of Predicted_err ~ 107931.0";
+title1 "mean squared error for test dataset ~ 107931.08";
 
 proc print data = mod_test (obs=10) ;
 sum Predicted_err;
