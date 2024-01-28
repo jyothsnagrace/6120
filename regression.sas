@@ -1,6 +1,18 @@
+ods html close;
 
-ods pdf file='C:\Users\lkona\Desktop\SAS\Assignment\college\college_lkona.pdf' pdftoc=2;
-Options topmargin="5in";
+proc template;
+	define style styles.MyPDFstyle;
+	parent=styles.pearl;
+	class systemtitle /
+      fontfamily= "<MTsans-serif>, Albany"
+	  fontsize=14pt fontstyle=italic
+	  color=purple
+	  fontweight=bold;
+end;
+run;
+
+ods pdf file='C:\Users\lkona\Desktop\SAS\Assignment\college\college_lkona.pdf' style=styles.MyPDFstyle pdftoc=2;
+Options topmargin="1in";
 
 /* Loading the college dataset for .csv format*/
 ods proclabel "Import college dataset";
@@ -32,8 +44,10 @@ data college_box_t; set college_box_t;
 label _name_ = "Variable";
 label col1 = "Value";
 run;
+ods graphics on;
 proc sgplot data=college_box_t;
 vbox col1 / group=_name_ ;
+keylegend / location=inside position=topright across=1;
 run;
 
 /* Log-transforming 'p_undergrad' and Dividing into train and test datasets */
@@ -70,14 +84,15 @@ if f_undergrad > 5953 then delete;
 if enroll > 1401.75 then delete;
 run;
 
-ods proclabel "after cleaning  outliers";
+ods proclabel "After cleaning  outliers";
 title "Proc Univariate Analysis after cleaning outliers";
 proc univariate data=enrolltrain_mod normal plot;
 var accept top10perc f_undergrad lp_undergrad room_board grad_rate P_1 enroll; run;
 
-ods proclabel "Trained Dataset count after cleaning outliers";
+ods proclabel "Trained Model count after cleaning outliers";
+title "Trained Model count after cleaning outliers";
 proc sql;
-	select count(*) as enrolltrain_mod from enrolltrain_mod;
+	select count(*) as Trained_Model_count from enrolltrain_mod;
 quit;
 
 /*Fitting Multiple Linear Regression*/
@@ -107,22 +122,24 @@ plot r.*p.;
 run;
 
 ods proclabel "Trained Dataset count after dropping variables";
+title "Trained Model count after dropping variables";
 proc sql;
-	select count(*) as enrolltrain_mod from enrolltrain_mod;
+	select count(*) as Trained_Model_Fcount from enrolltrain_mod;
 quit;
 
 
 /* Calculating the mean squared error for test dataset */
 data mod_test;
 set enrolltest;
-y_bar = 126.16808 + (0.13419*accept) + (0.13532*f_undergrad) + (-3.39419*lp_undergrad) + (-0.02518*room_board) + (32.92484* P_1);
+y_bar = 126.08411 + (0.13398*accept) + (0.13555*f_undergrad) + (-3.62913*lp_undergrad) + (-0.02522*room_board) + (33.09886* P_1);
 Predicted_err = ((enroll - y_bar)**2)/113;
 run;
 ods proclabel "mean squared error for test dataset";
-title "mean squared error for test dataset";
-title1 "Predicted_err sum=108047.10";
+title "MSE for test dataset";
+title1 "sum of Predicted_err ~ 107931.0";
 
-proc print data = mod_test ;
+proc print data = mod_test (obs=10) ;
 sum Predicted_err;
 run;
+ods graphics off;
 ods pdf close;
