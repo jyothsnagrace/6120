@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-02-08T10:11:59.310Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36" etag="lr9damQbTtuBYWQHsraf" version="23.1.2" type="github">
+<mxfile host="app.diagrams.net" modified="2024-02-08T10:19:08.105Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36" etag="bjNXZNcumhmcmmH53uzx" version="23.1.2" type="github">
   <diagram name="Page-1" id="efa7a0a1-bf9b-a30e-e6df-94a7791c09e9">
     <mxGraphModel dx="1306" dy="716" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="826" pageHeight="1169" background="none" math="0" shadow="0">
       <root>
@@ -19,15 +19,17 @@
         <mxCell id="28" value="&lt;p style=&quot;margin: 0px; margin-top: 4px; text-align: center; text-decoration: underline;&quot;&gt;&lt;strong&gt;Doctor&lt;/strong&gt;&lt;/p&gt;&lt;hr&gt;&lt;p style=&quot;margin: 0px; margin-left: 8px;&quot;&gt;&lt;b&gt;Doctor_ID (PK)&lt;/b&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px; margin-left: 8px;&quot;&gt;Doctor_fname&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px; margin-left: 8px;&quot;&gt;Doctor_lname&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px; margin-left: 8px;&quot;&gt;Doctor_dob&lt;/p&gt;&lt;p style=&quot;margin: 0px; margin-left: 8px;&quot;&gt;Doctor_gender&lt;/p&gt;&lt;p style=&quot;margin: 0px; margin-left: 8px;&quot;&gt;Doctor_email&lt;/p&gt;&lt;p style=&quot;border-color: var(--border-color); margin: 0px 0px 0px 8px;&quot;&gt;Doctor_phone_no&lt;/p&gt;&lt;p style=&quot;border-color: var(--border-color); margin: 0px 0px 0px 8px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;border-color: var(--border-color); margin: 0px 0px 0px 8px;&quot;&gt;&lt;b&gt;Doc_Hospita_Branch_code (FK)&lt;/b&gt;&lt;/p&gt;&lt;p style=&quot;border-color: var(--border-color); margin: 0px 0px 0px 8px;&quot;&gt;&lt;b&gt;Doc_Service_code (FK)&lt;/b&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;strokeColor=#003366;shadow=1;fillColor=#D4E1F5;fontColor=#003366" parent="1" vertex="1">
           <mxGeometry x="130" y="335.58" width="200" height="194.42" as="geometry" />
         </mxCell>
-        <mxCell id="oNx-tzqD3SN3q4KlSjPI-123" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;startArrow=diamondThin;startFill=0;curved=0;endSize=12;startSize=14;endArrow=open;entryX=1.019;entryY=0.619;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;fontSize=10;align=left;verticalAlign=top;fillColor=#D4E1F5;strokeColor=#003366;fontColor=#003366;labelBackgroundColor=#ffffff;shadow=1;" edge="1" parent="1" source="32" target="22">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="670" y="480" as="targetPoint" />
-            <mxPoint x="720" y="620" as="sourcePoint" />
-            <Array as="points">
-              <mxPoint x="720" y="480" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
+        <object label="" id="oNx-tzqD3SN3q4KlSjPI-123">
+          <mxCell style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=0;jettySize=auto;startArrow=diamondThin;startFill=0;curved=0;endSize=12;startSize=14;endArrow=open;entryX=1.019;entryY=0.619;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;fontSize=11;align=center;verticalAlign=middle;fillColor=#D4E1F5;strokeColor=#003366;fontColor=#003366;labelBackgroundColor=#ffffff;shadow=0;" edge="1" parent="1" source="32" target="22">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="670" y="480" as="targetPoint" />
+              <mxPoint x="720" y="620" as="sourcePoint" />
+              <Array as="points">
+                <mxPoint x="720" y="480" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </object>
         <mxCell id="32" value="&lt;p style=&quot;margin: 0px; margin-top: 4px; text-align: center; text-decoration: underline;&quot;&gt;&lt;strong&gt;Hospital_Branch&lt;/strong&gt;&lt;/p&gt;&lt;hr&gt;&lt;p style=&quot;margin: 0px; margin-left: 8px;&quot;&gt;&lt;b&gt;Hospital_Branch_ID (PK)&lt;/b&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px; margin-left: 8px;&quot;&gt;Hospital_Branch_name&lt;/p&gt;&lt;p style=&quot;margin: 0px; margin-left: 8px;&quot;&gt;Hospital_Branch_Type&lt;/p&gt;&lt;p style=&quot;border-color: var(--border-color); margin: 0px 0px 0px 8px;&quot;&gt;Hospital_Branch_zip_code&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;/p&gt;&lt;p style=&quot;border-color: var(--border-color); margin: 0px 0px 0px 8px;&quot;&gt;&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px; margin-left: 8px;&quot;&gt;Hospital_Branch_city_code (FK)&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;strokeColor=#003366;shadow=1;fillColor=#D4E1F5;fontColor=#003366" parent="1" vertex="1">
           <mxGeometry x="630" y="630" width="180" height="146.16" as="geometry" />
         </mxCell>
@@ -65,6 +67,34 @@
         </mxCell>
         <mxCell id="oNx-tzqD3SN3q4KlSjPI-119" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="oNx-tzqD3SN3q4KlSjPI-118" target="oNx-tzqD3SN3q4KlSjPI-118">
           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oNx-tzqD3SN3q4KlSjPI-127" value="" style="endArrow=open;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;entryX=0.006;entryY=0.287;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+          <mxGeometry x="1389.36" y="130" as="geometry">
+            <mxPoint x="333" y="450" as="sourcePoint" />
+            <mxPoint x="493.96000000000004" y="451.05500000000006" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="488" y="450" />
+              <mxPoint x="488" y="451" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="oNx-tzqD3SN3q4KlSjPI-128" value="0..n" style="resizable=0;align=left;verticalAlign=top;labelBackgroundColor=#ffffff;fontSize=10;strokeColor=#003366;shadow=1;fillColor=#D4E1F5;fontColor=#003366" connectable="0" vertex="1" parent="oNx-tzqD3SN3q4KlSjPI-127">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="7" y="10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="oNx-tzqD3SN3q4KlSjPI-129" value="1" style="resizable=0;align=right;verticalAlign=top;labelBackgroundColor=#ffffff;fontSize=10;strokeColor=#003366;shadow=1;fillColor=#D4E1F5;fontColor=#003366" connectable="0" vertex="1" parent="oNx-tzqD3SN3q4KlSjPI-127">
+          <mxGeometry x="1" relative="1" as="geometry">
+            <mxPoint x="-4" y="9" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="oNx-tzqD3SN3q4KlSjPI-130" value="0..n" style="resizable=0;align=left;verticalAlign=top;labelBackgroundColor=#ffffff;fontSize=10;strokeColor=#003366;shadow=1;fillColor=#D4E1F5;fontColor=#003366" connectable="0" vertex="1" parent="1">
+          <mxGeometry x="730" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="oNx-tzqD3SN3q4KlSjPI-131" value="1" style="resizable=0;align=right;verticalAlign=top;labelBackgroundColor=#ffffff;fontSize=10;strokeColor=#003366;shadow=1;fillColor=#D4E1F5;fontColor=#003366" connectable="0" vertex="1" parent="1">
+          <mxGeometry x="499.89983183486675" y="470.05545428983737" as="geometry">
+            <mxPoint x="174" y="12" as="offset" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
